@@ -23,7 +23,7 @@ def tljh_config_post_install(config):
     sh.chown('root:jupyterhub-users', '/mnt/Shared_RD')
     sh.chmod('777', '/mnt/Shared_RD')
     sh.chmod('g+s', '/mnt/Shared_RD')
-    sh.ln('-s', '/mnt/Shared_RD', '/etc/skel/Shared_Data')
+    sh.ln('-s', '/mnt/Shared_RD', '/etc/skel/Shared_RD')
 
     
     
