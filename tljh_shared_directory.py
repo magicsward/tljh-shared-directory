@@ -4,7 +4,7 @@ import sh
 
 @hookimpl
 def tljh_extra_user_conda_packages():
-    return ['Done']
+    return ['voila]
 
 @hookimpl
 def tljh_config_post_install(config):
