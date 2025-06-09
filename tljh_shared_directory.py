@@ -16,14 +16,14 @@ def tljh_config_post_install(config):
     ### sudo chmod 777 /srv/scratch
     ### sudo chmod g+s /srv/scratch
     ### sudo ln -s /srv/scratch /etc/skel/scratch
-    sh.mkdir('/mnt/Shared_Data', '-p')
+    sh.mkdir('/mnt/Shared_RD', '-p')
     # jupyterhub-users doesn't get created until a user logs in
     # make sure it's created before changing permissions on directory
     ensure_group('jupyterhub-users') 
-    sh.chown('root:jupyterhub-users', '/mnt/Shared_Data')
-    sh.chmod('777', '/mnt/Shared_Data')
-    sh.chmod('g+s', '/mnt/Shared_Data')
-    sh.ln('-s', '/mnt/Shared_Data', '/etc/skel/Shared_Data')
+    sh.chown('root:jupyterhub-users', '/mnt/Shared_RD')
+    sh.chmod('777', '/mnt/Shared_RD')
+    sh.chmod('g+s', '/mnt/Shared_RD')
+    sh.ln('-s', '/mnt/Shared_RD', '/etc/skel/Shared_Data')
 
     
     
